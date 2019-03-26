@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "NodeHTTPReplay-Addon-FF",
+  "version": "1.0",
+
+  "description": "Enables advanced features for the NodeHTTPReplay-Addon.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["nodehttpreplayclient-addon-ff.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background-script.js"]
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "notifications"
+  ]
+
+}
